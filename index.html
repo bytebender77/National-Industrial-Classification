@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Portal of India</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shepherd.js@latest/dist/css/shepherd.css">
+    <script src="https://cdn.jsdelivr.net/npm/shepherd.js@latest/dist/js/shepherd.min.js"></script>
+</head>
+<body>
+    <div id="google_translate_element" style="display: none;"></div>
+
+    <div class="top-strip">
+        <div class="accessibility-controls">
+            <button class="color-blind-btn" onclick="toggleColorBlindMode()">Color Blind Mode</button>
+            <div class="font-size-controls">
+                <button class="font-size-btn" onclick="changeFontSize('decrease')">A-</button>
+                <button class="font-size-btn" onclick="changeFontSize('increase')">A+</button>
+            </div>
+        </div>
+        <div class="language-selector">
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+                <option value="bn">বাংলা</option>
+                <option value="ta">தமிழ்</option>
+                <option value="te">తెలుగు</option>
+                <option value="mr">मराठी</option>
+                <option value="gu">ગુજરાતી</option>
+                <option value="kn">ಕನ್ನಡ</option>
+                <option value="ml">മലയാളം</option>
+                <option value="pa">ਪੰਜਾਬੀ</option>
+            </select>
+            
+        </div>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="India Emblem">
+        </div>
+        <div class="header-text">
+            <h1>National Industrial Classification</h1>
+            <p>Welcome to the National Portal of India</p>
+        </div>
+        <button id="startTourButton" class="tour-button">Start Tour</button>
+    </header>
+
+    <div class="nic-search-section">
+        <h1>NIC Code Search</h1>
+        <div class="nic-search-container">
+            <input type="text" id="searchBox" placeholder="Type or speak..." />
+            <button class="search-button" onclick="searchNIC()">Search</button>
+            <button id="voiceButton" class="voice-button">
+                <img src="voicelogoc.png" alt="Voice Search">
+            </button>
+        </div>
+
+        <div class="nic-results" id="nic-results">
+            <!-- Search results will appear here -->
+        </div>
+    </div>
+
+    <button id="darkModeToggle" class="dark-mode-toggle">
+        <span class="light-icon">🌞</span>
+        <span class="dark-icon">🌙</span>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
